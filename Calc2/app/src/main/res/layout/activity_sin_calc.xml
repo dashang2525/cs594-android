@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:columnCount="4"
+    android:orientation="horizontal"
+    android:id="@+id/ad" >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_box"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="4"
+        android:layout_column="0" />
+
+    <Button
+        android:layout_column="3"
+        android:text="i"
+        android:id="@+id/btn_i"
+        />
+
+    <Button android:text="sin"
+        android:id="@+id/btnsin"/>
+
+    <Button android:text="cos"
+        android:id="@+id/btncos"/>
+
+    <Button android:text="ton"
+        android:id="@+id/btnton"/>
+
+    <Button android:text="ln"
+        android:id="@+id/btn_ln"/>
+
+    <Button android:text="log" android:id="@+id/btnlog" />
+    <Button android:text="Pie" android:id="@+id/btnpie"/>
+
+    <Button android:text="e" android:id="@+id/btne"/>
+
+    <Button android:text="%" android:id="@+id/btn_per"/>
+
+    <Button android:text="!" android:id="@+id/btn_inv"/>
+
+    <Button android:text="Sqrt" android:id="@+id/btn_sqrt"/>
+
+    <Button android:text="^" android:id="@+id/btn_rest"/>
+
+
+    <Button
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:text="(" android:id="@+id/btn_frbr"/>
+
+    <Button android:text=")" android:id="@+id/btn_lstbr"/>
+
+
+
+</GridLayout>
