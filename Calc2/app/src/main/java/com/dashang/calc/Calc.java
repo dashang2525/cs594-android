@@ -412,9 +412,17 @@ public class Calc extends ActionBarActivity {
                 }else if(operator.equals("*")) {
                     total = a * b;
                 }else if(operator.equals("sin")) {
+                    double value = Math.sin(Math.toRadians(Double.parseDouble(one)));
+                    value = ((double) Math.round(value * 1000)) / 1000;
+                    total=value;
+                }else if(operator.equals("tan")) {
                     double value = Math.tan(Math.toRadians(Double.parseDouble(one)));
                     value = ((double) Math.round(value * 1000)) / 1000;
                     total=value;
+                }else if(operator.equals("cos")) {
+                double value = Math.cos(Math.toRadians(Double.parseDouble(one)));
+                value = ((double) Math.round(value * 1000)) / 1000;
+                total=value;
                 }
                 else{
 

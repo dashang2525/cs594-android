@@ -7,11 +7,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class SinCalc extends ActionBarActivity {
 
-    private Button btnsin,btncos,btnton,btn_ln,btnpie,btnlog,btne,btn_per,btn_inv,btn_sqrt,btn_rest;
+    private Button btnsin,btncos,btnton,btn_ln,btnpie,btnlog,btne;
     private String one="";
     private String firstvalue="",secondvalue="";
     private Double total;
@@ -24,19 +25,54 @@ public class SinCalc extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sin_calc);
         btnsin=(Button)findViewById(R.id.btnsin);
-
+        btnton=(Button)findViewById(R.id.btnton);
+        btncos=(Button)findViewById(R.id.btncos);
+        btnlog=(Button)findViewById(R.id.btnlog);
         btnsin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent;
                 intent = new Intent(SinCalc.this,Calc.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                intent.putExtra("sin","sin");
                 startActivity(intent);
-
             }
         });
 
+        btnton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                intent = new Intent(SinCalc.this,Calc.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                intent.putExtra("sin","tan");
+                startActivity(intent);
+            }
+        });
+
+        btncos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                intent = new Intent(SinCalc.this,Calc.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                intent.putExtra("sin","cos");
+                startActivity(intent);
+            }
+        });
+
+        btnlog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                intent = new Intent(SinCalc.this,Calc.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                intent.putExtra("sin","log");
+                startActivity(intent);
+            }
+        });
     }
+
 
 
     @Override
